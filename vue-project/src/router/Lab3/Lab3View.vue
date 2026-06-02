@@ -4,7 +4,7 @@ import Lab3Nav from './components/Lab3Nav.vue'
 
 <template>
   <div class="lab3">
-    <h2 class="lab3__heading">Лабораторна 3 — менеджер задач</h2>
+    <h2 class="lab3__heading">Лабораторна 3 - менеджер задач</h2>
     <Lab3Nav />
     <RouterView v-slot="{ Component }">
       <Transition name="page" mode="out-in">

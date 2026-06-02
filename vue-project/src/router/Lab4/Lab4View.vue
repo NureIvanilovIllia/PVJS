@@ -1,20 +1,30 @@
+<script setup>
+import Lab4Nav from './components/Lab4Nav.vue'
+</script>
+
 <template>
-  <section class="lab-placeholder">
-    <h2>Лабораторна 4</h2>
-    <p>Зміст буде додано пізніше.</p>
-  </section>
+  <div class="lab4">
+    <h2 class="lab4__heading">Лабораторна 4 - реєстрація на події</h2>
+    <Lab4Nav />
+    <RouterView v-slot="{ Component }">
+      <KeepAlive include="EventListView">
+        <component :is="Component" />
+      </KeepAlive>
+    </RouterView>
+  </div>
 </template>
 
 <style scoped>
-.lab-placeholder {
-  max-width: 32rem;
+.lab4 {
+  max-width: 48rem;
   margin: 0 auto;
   padding: 1.5rem;
-  color: #64748b;
 }
 
-.lab-placeholder h2 {
-  margin: 0 0 0.5rem;
-  color: #0f172a;
+.lab4__heading {
+  margin: 0 0 1rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #64748b;
 }
 </style>

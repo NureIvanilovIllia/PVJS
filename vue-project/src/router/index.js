@@ -4,6 +4,7 @@ import Lab2View from './Lab2/Lab2View.vue'
 import Lab3View from './Lab3/Lab3View.vue'
 import Lab4View from './Lab4/Lab4View.vue'
 import { lab3Routes } from './Lab3/router.js'
+import { lab4Routes } from './Lab4/router.js'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -33,6 +34,8 @@ const router = createRouter({
       path: '/lab4',
       name: 'lab4',
       component: Lab4View,
+      redirect: { name: 'lab4-events' },
+      children: lab4Routes,
     },
   ],
 })
